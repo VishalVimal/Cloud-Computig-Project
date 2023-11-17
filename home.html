@@ -178,14 +178,14 @@
 
     <div class="upload-section">
       <input type="file" class="inp" onchange="getImageData(event)" multiple />
-      <button onclick="selectImage()" class="upload-button">Select Images</button>
       <div class="progress-bar-container">
         <div class="progress-bar" id="progressBar">0%</div>
       </div>
       <div class="metaData"></div>
+      <br><br>
       <button onclick="uploadImage()" class="upload-button" id="uploadButton">Upload</button>
       <span class="completeMsg" id="completeMsg"></span>
-      <span class="loading">Loading...</span>
+      <span class="loading"></span>
       <p class="message" id="message"></p>
     </div>
     <button class="sort-button" onclick="sortImages('type')">Sort by Type</button>
@@ -348,9 +348,9 @@
               image.className = "img";
               imageContainer.appendChild(image);
 
-              let imageName = document.createElement("p");
-              imageName.innerHTML = "File Name: " + fileName;
-              imageContainer.appendChild(imageName);
+                let imageName = document.createElement("p");
+                imageName.innerHTML = "File Name: " + fileName;
+                imageContainer.appendChild(imageName);
 
               let deleteButton = document.createElement("button");
               deleteButton.innerText = "Delete";
